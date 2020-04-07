@@ -40,9 +40,12 @@ export default class MasterHog extends Component {
         </div>
         
         <ul className="hoglist">
-          <BabyHog />
-          <BabyHog />
-          <BabyHog />
+          {this.props.offSpring.map(
+            hog => <BabyHog 
+            eyeColor={this.state.eyeColor} 
+            name={hog.name} 
+            hobby={hog.hobby} 
+            key={hog.id}/>)}
         </ul>
 
       </div>
